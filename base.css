@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "Gta";
+  src: url("./American_TextC.ttf");
+}
+h2 {
+  font-family: "Gta";
+  letter-spacing: 0.2rem;
+
+  @apply text-6xl py-4;
+}
+.outer-container {
+  @apply flex flex-col flex-grow md:flex-row;
+}
