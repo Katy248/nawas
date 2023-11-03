@@ -538,6 +538,10 @@ video {
   display: flex;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -552,10 +556,6 @@ video {
 
 .max-w-7xl {
   max-width: 80rem;
-}
-
-.max-w-screen-sm {
-  max-width: 640px;
 }
 
 .flex-grow {
@@ -800,6 +800,60 @@ h2 {
 @media (min-width: 768px) {
   .outer-container {
     flex-direction: row;
+  }
+}
+
+* {
+  overflow-x: hidden;
+}
+
+body * {
+  overflow-y: hidden;
+}
+
+.epigraph {
+  font-family: "Gta";
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .epigraph {
+    width: 50%;
+    flex-direction: row;
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+p {
+  padding-bottom: 1rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+h3 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+h3:hover {
+  text-decoration-line: underline;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:w-1\/2 {

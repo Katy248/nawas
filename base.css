@@ -14,3 +14,19 @@ h2 {
 .outer-container {
   @apply flex flex-col flex-grow md:flex-row;
 }
+* {
+  overflow-x: hidden;
+}
+body * {
+  overflow-y: hidden;
+}
+.epigraph {
+  font-family: "Gta";
+  @apply md:text-6xl text-xl md:w-1/2 flex-col md:flex-row text-center;
+}
+p {
+  @apply text-3xl md:text-5xl pb-4;
+}
+h3 {
+  @apply md:text-4xl hover:underline py-2;
+}
