@@ -1,8 +1,6 @@
 <template>
     <div class="article-epigraph" :class="getClasses(theme)">
-        <span>
-            {{ text }}
-        </span>
+        <span v-html="text"></span>
     </div>
 </template>
 <script>

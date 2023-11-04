@@ -10,6 +10,7 @@ const ARTICLES = [
     },
     {
         header: '<a href="https://ru.wikipedia.org/wiki/Видеоигра">Видеоигры</a> и <a href="https://ru.wikipedia.org/wiki/Волейбол">баскетбол</a>',
+        unformattedHeader: "Видеоигры и баскетбол",
         id: "the-videogames-and-basketball",
         epigraphs: ["В начале было слово", "Все слова — пиздёжь"],
         text: [
