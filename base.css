@@ -5,7 +5,8 @@
   font-family: "Gta";
   src: url("./American_TextC.ttf");
 }
-h2 {
+h2,
+h1 {
   font-family: "Gta";
   letter-spacing: 0.2rem;
 
