@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gta";
+  src: url("./American_TextC.ttf");
+}
+
+h2 {
+  font-family: "Gta";
+  letter-spacing: 0.2rem;
+
+  @apply text-6xl py-4;
+}
+
+.outer-container {
+  @apply flex flex-col flex-grow md:flex-row;
+}
+
+.epigraph {
+  font-family: "Gta";
+  @apply md:text-6xl text-xl md:w-1/2 flex-col md:flex-row text-center;
+}
+
+
+* {
+  overflow-x: hidden;
+}
+
+body * {
+  overflow-y: hidden;
+}
+
+p {
+  @apply text-3xl md:text-5xl pb-4;
+}
+
+h3 {
+  @apply md:text-4xl hover:underline py-2;
+}
+
+.article-container {
+  @apply flex flex-col flex-grow md:flex-row;
+}
+
+.article-epigraph {
+  font-family: "Gta";
+  @apply md:text-6xl text-xl md:w-1/2 flex-col md:flex-row text-center;
+}
+
+.article-text {
+
+
+  @apply w-auto max-w-7xl text-center text-5xl
+}
+
+.article-text a {
+  @apply underline;
+}
