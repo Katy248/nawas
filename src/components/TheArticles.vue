@@ -15,7 +15,6 @@ export default {
     methods: {
         getTheme: (articles, themes, article) => {
             let index = articles.indexOf(article);
-            console.log(index);
             return themes[index] ?? themes[0];
         },
     },
