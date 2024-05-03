@@ -5,8 +5,8 @@ FONT := American_TextC.ttf
 .PHONY: build setup help
 
 setup:
-	npm install html-minifier-terser -g | lolcat
-	npm install tailwindcss -g | lolcat
+	npm install html-minifier-terser -g
+	npm install tailwindcss -g
 
 build: $(OUTPUT_DIR)/index.html $(OUTPUT_DIR)/index.css $(OUTPUT_DIR)/main.js $(OUTPUT_DIR)/fonts/$(FONT) $(OUTPUT_DIR)/music
 
