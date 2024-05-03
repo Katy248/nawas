@@ -9,8 +9,6 @@ setup:
 	npm install tailwindcss -g | lolcat
 
 build: $(OUTPUT_DIR)/index.html $(OUTPUT_DIR)/index.css $(OUTPUT_DIR)/main.js $(OUTPUT_DIR)/fonts/$(FONT) $(OUTPUT_DIR)/music
-	@echo "Сборка завершена!" | lolcat
-	@echo "'Makefile' внутри, готовый сайт снаружи \n(папка './public')" | lolcat --animate
 
 clear:
 	rm -rf $(OUTPUT_DIR)
