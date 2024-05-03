@@ -1,16 +1,20 @@
 OUTPUT_DIR := public
+NODE_MODULES_DIR := node_modules
+FONT := American_TextC.ttf
 
 .PHONY: build setup help
 
 setup:
-	npm install
-	npm install html-minifier-terser -g
-	npm install tailwindcss -g
+	npm install html-minifier-terser -g | lolcat
+	npm install tailwindcss -g | lolcat
 
-build: $(OUTPUT_DIR)/index.html $(OUTPUT_DIR)/index.css $(OUTPUT_DIR)/main.js $(OUTPUT_DIR)/fonts $(OUTPUT_DIR)/music
+build: $(OUTPUT_DIR)/index.html $(OUTPUT_DIR)/index.css $(OUTPUT_DIR)/main.js $(OUTPUT_DIR)/fonts/$(FONT) $(OUTPUT_DIR)/music
+	@echo "Сборка завершена!" | lolcat
+	@echo "'Makefile' внутри, готовый сайт снаружи \n(папка './public')" | lolcat --animate
 
 clear:
 	rm -rf $(OUTPUT_DIR)
+	rm -rf $(NODE_MODULES_DIR)
 
 $(OUTPUT_DIR)/index.html: index.html $(OUTPUT_DIR)
 	npx html-minifier-terser $< --output $@ --remove-comments --collapse-whitespace --minify-js --minify-css
@@ -21,11 +25,14 @@ $(OUTPUT_DIR)/index.css: base.css index.html $(OUTPUT_DIR)
 $(OUTPUT_DIR)/main.js: main.js $(OUTPUT_DIR)
 	npx html-minifier-terser $< --output $@ --remove-comments --collapse-whitespace --minify-js
 
-$(OUTPUT_DIR)/fonts: fonts/ $(OUTPUT_DIR)
-	cp -r $< $@
+$(OUTPUT_DIR)/fonts/$(FONT): fonts/$(FONT) $(OUTPUT_DIR)/fonts
+	cp $< $@
 
 $(OUTPUT_DIR)/music: music/ $(OUTPUT_DIR)
 	cp -r $< $@
+
+$(OUTPUT_DIR)/fonts: $(OUTPUT_DIR)
+	mkdir -p $@
 
 $(OUTPUT_DIR):
 	mkdir -p $@
