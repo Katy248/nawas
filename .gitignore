@@ -1,2 +1,8 @@
+# editor folders
+.vscode/
+
+# hash folders
 node_modules/
+
+# output folders
 public/
