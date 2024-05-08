@@ -86,19 +86,19 @@ nav>ul>li {
 
 /* Toast */
 .toast-container {
-    @apply min-h-screen w-full fixed flex flex-col items-center justify-center p-10 z-50 disabled:hidden;
+    @apply min-h-screen w-full fixed flex flex-col items-center justify-center p-2 md:p-10 z-50 disabled:hidden;
 }
 
 .toast {
-    @apply sticky rounded-lg bg-gray-200 text-gray-900 w-full h-full p-10 md:px-32 border-blue-600 border-4 drop-shadow-sm shadow-blue-600;
+    @apply sticky rounded-lg bg-gray-200 text-gray-900 w-full h-full p-2 md:p-10 md:px-32 border-blue-600 border-4 drop-shadow-sm shadow-blue-600;
 }
 
 .toast>h4 {
-    @apply m-4 text-3xl;
+    @apply m-4 text-xl md:text-3xl;
 }
 
 .toast>p {
-    @apply m-4 text-xl;
+    @apply m-4 text-sm md:text-xl;
 }
 
 .toast button {
