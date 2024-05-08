@@ -7,11 +7,18 @@
     src: url("./fonts/American_TextC.ttf");
 }
 
-h2,
-h1 {
+h1,
+h2 {
+    @apply text-center;
     font-family: "Gta";
     letter-spacing: 0.2rem;
+}
 
+h1 {
+    @apply text-7xl;
+}
+
+h2 {
     @apply text-6xl py-4;
 }
 
@@ -33,7 +40,7 @@ body * {
 }
 
 nav a {
-    @apply no-underline
+    @apply no-underline;
 }
 
 a {
@@ -41,15 +48,31 @@ a {
 }
 
 em {
-    @apply italic opacity-70
+    @apply italic opacity-70;
 }
 
 p {
     @apply text-3xl md:text-5xl pb-4;
 }
 
+cite {
+    @apply flex text-right justify-end px-5 py-10;
+}
+
 h3 {
     @apply md:text-4xl hover:underline py-2;
+}
+
+nav {
+    @apply flex flex-col flex-grow;
+}
+
+nav>ul {
+    @apply flex flex-col flex-wrap flex-grow justify-evenly items-center;
+}
+
+nav>ul>li {
+    @apply flex md:text-3xl hover:underline text-center;
 }
 
 /* Toast */
@@ -78,5 +101,5 @@ h3 {
 }
 
 .toast button.flat {
-    @apply text-gray-500 hover:bg-gray-300
+    @apply text-gray-500 focus:bg-gray-300 hover:bg-gray-300;
 }
