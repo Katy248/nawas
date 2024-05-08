@@ -32,6 +32,10 @@ body * {
     @apply md:text-6xl text-xl md:w-1/2 flex-col md:flex-row text-center;
 }
 
+nav a {
+    @apply no-underline
+}
+
 a {
     @apply underline;
 }
