@@ -16,10 +16,16 @@ acceptCookieButton.addEventListener("click", () => {
 });
 rejectButton.addEventListener("click", () => {
     toastContainer.remove();
+    tryStopSound();
 });
 
 const tryPlaySound = () => {
     try {
         player.play();
+    } catch {}
+};
+const tryStopSound = () => {
+    try {
+        player.pause();
     } catch {}
 };
