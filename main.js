@@ -1,23 +1,26 @@
 const trackList = ["./music/cyberbulling.mp3", "./music/miss_you.mp3", "./music/nine_eleven.mp3"];
 const source = trackList[Math.floor(Math.random() * trackList.length)];
 const player = new Audio(source);
-player.play();
 
-/* document.addEventListener("scroll", () => {
-    tryPlaySound();
-}); */
+const DISABLE_MUSIC_KEY = "disableMusic";
+
 const acceptCookieButton = document.getElementById("cookie-btn");
 const rejectButton = document.getElementById("reject-btn");
-const toastContainer = document.getElementById("toast-container");
+const cookieAlert = document.getElementById("cookie-alert");
 
 acceptCookieButton.addEventListener("click", () => {
-    toastContainer.remove();
+    cookieAlert.remove();
     tryPlaySound();
 });
 rejectButton.addEventListener("click", () => {
-    toastContainer.remove();
+    localStorage.setItem(DISABLE_MUSIC_KEY, true);
+    cookieAlert.remove();
     tryStopSound();
 });
+
+if (!localStorage.getItem(DISABLE_MUSIC_KEY)) {
+    cookieAlert.classList.remove("hidden");
+}
 
 const tryPlaySound = () => {
     try {

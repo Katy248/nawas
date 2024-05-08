@@ -958,8 +958,9 @@
   </main>
 
   <!-- Cookie alert -->
+
   <div id="toast-container" class="toast-container" role="alert">
-    <div class="toast">
+    <div id="cookie-alert" class="toast hidden">
       <h4>Мы используем файлы <kbd>cookie</kbd></h4>
       <p>На самом деле мы их не используем, но заебать пользователя прямо при попадании на наш сайт — важнее всего для
         нас
@@ -969,10 +970,12 @@
           файлах-<kbd>cookie</kbd></a>
       </p>
       <div class="flex flex-col md:flex-row justify-between">
-        <button class="primary" id="cookie-btn">Согласиться с использованием <kbd>cookie</kbd>-файлов</button>
+        <button class="primary" id="cookie-btn" autofocus>Согласиться с использованием
+          <kbd>cookie</kbd>-файлов</button>
         <button class="flat" id="reject-btn">Я не хочу, чтобы меня оглушил странный звук</button>
       </div>
     </div>
+
   </div>
   <!--  -->
 
