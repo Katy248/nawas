@@ -6,15 +6,16 @@ const DISABLE_MUSIC_KEY = "disableMusic";
 
 const acceptCookieButton = document.getElementById("cookie-btn");
 const rejectButton = document.getElementById("reject-btn");
+const cookieContainer = document.getElementById("cookie-container");
 const cookieAlert = document.getElementById("cookie-alert");
 
 acceptCookieButton.addEventListener("click", () => {
-    cookieAlert.remove();
+    cookieContainer.remove();
     tryPlaySound();
 });
 rejectButton.addEventListener("click", () => {
     localStorage.setItem(DISABLE_MUSIC_KEY, true);
-    cookieAlert.remove();
+    cookieContainer.remove();
     tryStopSound();
 });
 
