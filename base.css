@@ -32,6 +32,14 @@ body * {
     @apply md:text-6xl text-xl md:w-1/2 flex-col md:flex-row text-center;
 }
 
+a {
+    @apply underline;
+}
+
+em {
+    @apply italic opacity-70
+}
+
 p {
     @apply text-3xl md:text-5xl pb-4;
 }
@@ -44,15 +52,19 @@ h3 {
 .toast-container {
     @apply min-h-screen w-full fixed flex flex-col items-center justify-center p-10 z-50 disabled:hidden;
 }
+
 .toast {
     @apply sticky rounded-md bg-gray-200 text-gray-900 w-full h-full p-10 md:px-32 border-blue-600 border-4 drop-shadow-sm shadow-blue-600;
 }
-.toast > h3 {
+
+.toast>h3 {
     @apply m-4 text-3xl;
 }
-.toast > p {
+
+.toast>p {
     @apply m-4 text-xl;
 }
+
 .toast button {
     @apply m-4 text-gray-100 bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 focus:ring-4 ring-blue-300 border-2 p-4 rounded-md;
 }
