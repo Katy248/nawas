@@ -6,42 +6,35 @@
     font-family: "Gta";
     src: url("./fonts/American_TextC.ttf");
 }
-
+* {
+    overflow-x: hidden;
+    @apply overflow-x-hidden;
+}
 h1,
 h2,
 h3 {
     @apply text-center py-4 tracking-widest;
     font-family: "Gta";
-    /*  */
 }
-
 h1 {
     @apply text-2xl md:text-4xl xl:text-7xl;
 }
-
 h2 {
     @apply md:text-2xl xl:text-6xl;
 }
-
 h3 {
     @apply xl:text-5xl;
 }
-
+p,
+cite {
+    @apply text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl;
+}
 p {
-    @apply text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl py-4;
+    @apply py-4;
 }
 
 .outer-container {
     @apply flex flex-col flex-grow md:flex-row;
-}
-
-* {
-    overflow-x: hidden;
-    @apply overflow-x-hidden
-}
-
-body * {
-    @apply overflow-y-hidden
 }
 
 .epigraph {
@@ -49,8 +42,11 @@ body * {
     @apply md:text-6xl text-xl md:w-1/2 flex-col md:flex-row text-center;
 }
 
-.outer-container>div {
+.outer-container > div {
     @apply text-justify px-5 w-auto max-w-7xl text-5xl;
+}
+blockquote {
+    @apply overflow-y-hidden;
 }
 
 nav a {
@@ -65,8 +61,6 @@ em {
     @apply italic opacity-70;
 }
 
-
-
 cite {
     @apply flex text-right justify-end px-5 py-10;
 }
@@ -79,11 +73,11 @@ nav {
     @apply flex flex-col flex-grow;
 }
 
-nav>ul {
+nav > ul {
     @apply flex flex-col flex-grow justify-evenly items-center;
 }
 
-nav>ul>li {
+nav > ul > li {
     @apply flex md:text-3xl hover:underline text-center;
 }
 
@@ -96,11 +90,11 @@ nav>ul>li {
     @apply sticky rounded-lg bg-gray-200 text-gray-900 w-full h-full p-2 md:p-10 md:px-32 border-blue-600 border-4 drop-shadow-sm shadow-blue-600;
 }
 
-.toast>h4 {
+.toast > h4 {
     @apply m-4 text-xl md:text-3xl;
 }
 
-.toast>p {
+.toast > p {
     @apply m-4 text-sm md:text-xl;
 }
 
