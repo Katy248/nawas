@@ -43,7 +43,7 @@ $(OUTPUT_DIR)/fonts:
 $(OUTPUT_DIR)/icons: 
 	cp -r icons $@
 
-$(OUTPUT_DIR)/images
+$(OUTPUT_DIR)/images:
 	cp -r images $@
 
 $(OUTPUT_DIR):
