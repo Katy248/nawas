@@ -6,3 +6,6 @@ node_modules/
 
 # output folders
 public/
+
+# other files
+index.css
