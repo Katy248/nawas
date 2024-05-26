@@ -2,7 +2,7 @@ OUTPUT_DIR := public
 NODE_MODULES_DIR := node_modules
 FONT := American_TextC.ttf
 
-OUTPUT_DIRS := $(OUTPUT_DIR)/music $(OUTPUT_DIR)/icons $(OUTPUT_DIR)/fonts
+OUTPUT_DIRS := $(OUTPUT_DIR)/music $(OUTPUT_DIR)/icons $(OUTPUT_DIR)/fonts $(OUTPUT_DIR)/images
 OUTPUT_FILES := $(OUTPUT_DIR)/favicon.ico $(OUTPUT_DIR)/manifest.json $(OUTPUT_DIR)/index.html $(OUTPUT_DIR)/index.css $(OUTPUT_DIR)/main.js
 
 .PHONY: build setup help
@@ -42,6 +42,9 @@ $(OUTPUT_DIR)/fonts:
 
 $(OUTPUT_DIR)/icons: 
 	cp -r icons $@
+
+$(OUTPUT_DIR)/images
+	cp -r images $@
 
 $(OUTPUT_DIR):
 	mkdir -p $@
