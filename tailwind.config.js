@@ -6,7 +6,11 @@ module.exports = {
             gta: ["GTA Russian"],
             monospace: "monospace",
         },
-        extend: {},
+        extend: {
+            screens: {
+                ssm: "250px",
+            },
+        },
     },
     plugins: [],
 };

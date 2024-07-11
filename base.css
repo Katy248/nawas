@@ -6,34 +6,42 @@
     font-family: "Gta";
     src: url("./fonts/American_TextC.ttf");
 }
+
 * {
     overflow-x: hidden;
     @apply overflow-x-hidden;
 }
+
 body * {
     @apply: overflow-y-hidden;
 }
+
 h1,
 h2,
 h3 {
     @apply text-center py-4 tracking-widest;
     font-family: "Gta";
 }
+
 h1 {
     @apply text-2xl md:text-4xl xl:text-7xl;
 }
+
 h2 {
     @apply md:text-2xl xl:text-6xl;
 }
+
 h3 {
     @apply xl:text-5xl;
 }
+
 p,
 cite {
-    @apply text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl;
+    @apply ssm:text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl;
 }
+
 p {
-    @apply py-4;
+    @apply ssm:py-4;
 }
 
 .outer-container {
@@ -42,12 +50,13 @@ p {
 
 .epigraph {
     font-family: "Gta";
-    @apply md:text-6xl text-xl md:w-1/2 flex-col md:flex-row text-center;
+    @apply md:text-6xl ssm:text-xl md:w-1/2 flex-col md:flex-row text-center;
 }
 
 .outer-container > div {
-    @apply text-justify px-5 w-auto max-w-7xl text-5xl;
+    @apply text-justify px-5 w-auto max-w-7xl ssm:text-5xl;
 }
+
 blockquote {
     @apply overflow-y-hidden;
 }
@@ -73,7 +82,7 @@ h3 {
 }
 
 nav {
-    @apply flex flex-col flex-grow;
+    @apply flex flex-col flex-grow overflow-hidden;
 }
 
 nav > ul {
@@ -90,19 +99,19 @@ nav > ul > li {
 }
 
 .toast {
-    @apply sticky rounded-lg bg-gray-200 text-gray-900 w-full h-full p-2 md:p-10 md:px-32 border-blue-600 border-4 drop-shadow-sm shadow-blue-600;
+    @apply py-1 sticky rounded-lg bg-gray-200 text-gray-900 w-full h-full ssm:p-2 md:p-10 md:px-32 border-blue-600 border-4 drop-shadow-sm shadow-blue-600 overflow-auto;
 }
 
 .toast > h4 {
-    @apply m-4 text-xl md:text-3xl;
+    @apply mx-2 font-semibold ssm:m-4 ssm:text-xl md:text-3xl;
 }
 
 .toast > p {
-    @apply m-4 text-sm md:text-xl;
+    @apply mx-2 ssm:m-4 text-sm md:text-xl;
 }
 
 .toast button {
-    @apply m-4 p-4 rounded-md focus:ring-4 ring-blue-300 border-2 font-semibold;
+    @apply mx-2 ssm:m-4 text-sm p-1 ssm:p-4 rounded-md focus:ring-4 ring-blue-300 ssm:border-2 ssm:font-semibold;
 }
 
 .toast button.primary {
